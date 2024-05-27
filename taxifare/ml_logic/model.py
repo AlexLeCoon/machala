@@ -69,7 +69,13 @@ def train_model(
         restore_best_weights=True,
         verbose=1
     )
-
+    print(X)
+    print(X.shape)
+    print(type(X))
+    print("And now it's y")
+    print(y)
+    print(y.shape)
+    print(type(y))
     history = model.fit(
         X,
         y,
@@ -78,7 +84,7 @@ def train_model(
         epochs=100,
         batch_size=batch_size,
         callbacks=[es],
-        verbose=0
+        verbose=1
     )
 
     print(f"✅ Model trained on {len(X)} rows with min val MAE: {round(np.min(history.history['val_mae']), 2)}")
