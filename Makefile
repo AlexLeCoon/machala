@@ -113,3 +113,5 @@ reset_gcs_files:
 
 reset_all_files: reset_local_files reset_bq_files reset_gcs_files
 
+print_data_course:
+	echo ${DATA_SIZE}
